@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static String calc(String input) {
 
         Scanner readFromCons = new Scanner(System.in);
         System.out.println("Please input your 2 numbers calculation request:");
@@ -79,7 +79,7 @@ public class Main {
 
             }
 
-            if (userInput.contains("-")) {
+            else if (userInput.contains("-")) {
                 numbs = userInput.split("-");
 
 
@@ -132,7 +132,7 @@ public class Main {
 
             }
 
-            if (userInput.contains("*")) {
+            else if (userInput.contains("*")) {
                 numbs = userInput.split("\\*");
 
 
@@ -197,7 +197,7 @@ public class Main {
             }
 
 
-            if (userInput.contains("/")) {
+            else if (userInput.contains("/")) {
                 numbs = userInput.split("/");
 
 
@@ -249,9 +249,9 @@ public class Main {
                 System.out.println(ones[(arabNum[0] / arabNum[1])%10 - 1]);
 
 
-            } //else {
-                //exAlert = 5 / 0; // генерация ошибки в случае отсутствия арифм. знаков
-            //}
+            } else {
+                 exAlert = 5 / 0; // генерация ошибки в случае отсутствия арифм. знаков
+            }
 
         }
 
